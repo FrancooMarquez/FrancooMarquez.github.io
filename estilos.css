@@ -39,7 +39,6 @@
     transform: scale(1.06);
 }
 
-/* Sección de habilidades visuales */
 .habilidades {
     background: rgba(255,255,255,0.97);
     border-radius: 16px;
@@ -68,6 +67,8 @@
     box-shadow: 0 2px 8px rgba(124,77,255,0.10);
     letter-spacing: 0.5px;
     transition: background 0.2s, color 0.2s, transform 0.2s;
+    cursor: default;
+    user-select: none;
 }
 .skill:hover {
     background: linear-gradient(90deg, #22c8e5 0%, #7c4dff 100%);
@@ -75,7 +76,6 @@
     transform: scale(1.08);
 }
 
-/* Mejorar la sección de proyectos para que no seleccione ni cambie el cursor */
 .proyectos {
     cursor: default;
     user-select: none;
@@ -88,8 +88,8 @@
     color: #fff;
     padding: 5rem 1rem;
     text-align: center;
-    animation: fondoMovimiento 10s ease infinite;
-    position: relative;
+    animation: fondoMovimiento 15s ease infinite;
+    position: center;
     z-index: 10;
 }
 
@@ -112,57 +112,16 @@ header h1, header p {
     text-shadow: 4px 4px 9px black;
 }
 
-/* Fondo general */
 body {
     margin: 0;
     font-family: 'Montserrat', 'Segoe UI', Helvetica, Arial, sans-serif;
     color: #333;
     line-height: 1.6;
     min-height: 100vh;
-    /* Fondo animado con gradiente y burbujas */
     background: linear-gradient(120deg, #0e0c11 0%, #2d1f3a 50%, #0e0c11 100%);
     overflow-x: hidden;
 }
 
-/* Fondo de burbujas animadas */
-.burbujas-bg {
-    position: fixed;
-    top: 120px; /* Empieza debajo del header */
-    left: 0;
-    width: 100vw;
-    height: calc(100vh - 120px); /* No cubre el header */
-    pointer-events: none;
-    z-index: 0;
-}
-
-.burbuja {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.18;
-    background: linear-gradient(135deg, #7c4dff 60%, #22c8e5 100%);
-    animation: flotar 16s linear infinite;
-    z-index: -2;
-}
-.burbuja:nth-child(1) { width: 80px; height: 80px; left: 10vw; animation-duration: 18s; animation-delay: 0s; }
-.burbuja:nth-child(2) { width: 120px; height: 120px; left: 30vw; animation-duration: 22s; animation-delay: 2s; }
-.burbuja:nth-child(3) { width: 60px; height: 60px; left: 60vw; animation-duration: 15s; animation-delay: 4s; }
-.burbuja:nth-child(4) { width: 100px; height: 100px; left: 80vw; animation-duration: 20s; animation-delay: 1s; }
-.burbuja:nth-child(5) { width: 140px; height: 140px; left: 50vw; animation-duration: 25s; animation-delay: 3s; }
-.burbuja:nth-child(6) { width: 90px; height: 90px; left: 75vw; animation-duration: 19s; animation-delay: 5s; }
-.burbuja:nth-child(7) { width: 70px; height: 70px; left: 20vw; animation-duration: 17s; animation-delay: 6s; }
-.burbuja:nth-child(8) { width: 110px; height: 110px; left: 40vw; animation-duration: 21s; animation-delay: 7s; }
-.burbuja:nth-child(9) { width: 50px; height: 50px; left: 65vw; animation-duration: 14s; animation-delay: 8s; }
-.burbuja:nth-child(10) { width: 100px; height: 100px; left: 85vw; animation-duration: 23s; animation-delay: 9s; }
-
-@keyframes flotar {
-    0% { top: calc(100vh - 120px); transform: translateY(0) scale(1); opacity: 0.18; }
-    60% { opacity: 0.28; }
-    95% { opacity: 0.10; }
-    100% { top: -150px; transform: translateY(-100vh) scale(1.2); opacity: 0; }
-}
-
-
-/* Mejorar visibilidad del texto */
 section,
 footer {
     background-color: rgba(255, 255, 255, 0.95);
@@ -173,6 +132,7 @@ footer {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     animation: fadeInUp 0.5s ease forwards;
     opacity: 0;
+    
 }
 
 @keyframes fadeInUp {
@@ -187,7 +147,6 @@ footer {
     }
 }
 
-/* Mantener estilos medio moderno ahi */
 .foto-perfil {
     width: 200px;
     height: 200px;
