@@ -1,0 +1,248 @@
+/* Color destacado para el nombre en el h1 */
+.nombre-color {
+    color: #7c4dff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+.nombre-color:hover {
+    color: #3a2d6d;
+}
+
+/* Subtítulo elegante debajo del h1 */
+.subtitulo {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    color: #e0d7f7;
+    text-shadow: 2px 2px 8px #00000033;
+}
+
+/* Botón de contacto destacado */
+.btn-contacto {
+    display: inline-block;
+    background: linear-gradient(90deg, #7c4dff 0%, #22c8e5 100%);
+    color: #fff;
+    padding: 0.8rem 2.2rem;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 12px rgba(124,77,255,0.15);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.btn-contacto:hover {
+    background: linear-gradient(90deg, #22c8e5 0%, #7c4dff 100%);
+    color: #fff;
+    transform: scale(1.06);
+}
+
+/* Sección de habilidades visuales */
+.habilidades {
+    background: rgba(255,255,255,0.97);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 8px 24px rgba(124,77,255,0.08);
+    text-align: center;
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.2rem;
+}
+.skill {
+    background: linear-gradient(90deg, #7c4dff 0%, #22c8e5 100%);
+    color: #fff;
+    padding: 0.6rem 1.3rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(124,77,255,0.10);
+    letter-spacing: 0.5px;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.skill:hover {
+    background: linear-gradient(90deg, #22c8e5 0%, #7c4dff 100%);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+/* Mejorar la sección de proyectos para que no seleccione ni cambie el cursor */
+.proyectos {
+    cursor: default;
+    user-select: none;
+}
+/* Fondo con imagen para el header */
+#encabezado {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('fondo-header.jpg');
+    background-size: 95% 120%;
+    background-position: right center;
+    color: #fff;
+    padding: 5rem 1rem;
+    text-align: center;
+    animation: fondoMovimiento 10s ease infinite;
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes fondoMovimiento {
+    0% {
+        background-position: 0% 1%;
+    }
+
+    50% {
+        background-position: 100% 1%;
+    }
+
+    100% {
+        background-position: 0% 1%;
+    }
+}
+
+header h1, header p {
+    color: white;
+    text-shadow: 4px 4px 9px black;
+}
+
+/* Fondo general */
+body {
+    margin: 0;
+    font-family: 'Montserrat', 'Segoe UI', Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    /* Fondo animado con gradiente y burbujas */
+    background: linear-gradient(120deg, #0e0c11 0%, #2d1f3a 50%, #0e0c11 100%);
+    overflow-x: hidden;
+}
+
+/* Fondo de burbujas animadas */
+.burbujas-bg {
+    position: fixed;
+    top: 120px; /* Empieza debajo del header */
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 120px); /* No cubre el header */
+    pointer-events: none;
+    z-index: 0;
+}
+
+.burbuja {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.18;
+    background: linear-gradient(135deg, #7c4dff 60%, #22c8e5 100%);
+    animation: flotar 16s linear infinite;
+    z-index: -2;
+}
+.burbuja:nth-child(1) { width: 80px; height: 80px; left: 10vw; animation-duration: 18s; animation-delay: 0s; }
+.burbuja:nth-child(2) { width: 120px; height: 120px; left: 30vw; animation-duration: 22s; animation-delay: 2s; }
+.burbuja:nth-child(3) { width: 60px; height: 60px; left: 60vw; animation-duration: 15s; animation-delay: 4s; }
+.burbuja:nth-child(4) { width: 100px; height: 100px; left: 80vw; animation-duration: 20s; animation-delay: 1s; }
+.burbuja:nth-child(5) { width: 140px; height: 140px; left: 50vw; animation-duration: 25s; animation-delay: 3s; }
+.burbuja:nth-child(6) { width: 90px; height: 90px; left: 75vw; animation-duration: 19s; animation-delay: 5s; }
+.burbuja:nth-child(7) { width: 70px; height: 70px; left: 20vw; animation-duration: 17s; animation-delay: 6s; }
+.burbuja:nth-child(8) { width: 110px; height: 110px; left: 40vw; animation-duration: 21s; animation-delay: 7s; }
+.burbuja:nth-child(9) { width: 50px; height: 50px; left: 65vw; animation-duration: 14s; animation-delay: 8s; }
+.burbuja:nth-child(10) { width: 100px; height: 100px; left: 85vw; animation-duration: 23s; animation-delay: 9s; }
+
+@keyframes flotar {
+    0% { top: calc(100vh - 120px); transform: translateY(0) scale(1); opacity: 0.18; }
+    60% { opacity: 0.28; }
+    95% { opacity: 0.10; }
+    100% { top: -150px; transform: translateY(-100vh) scale(1.2); opacity: 0; }
+}
+
+
+/* Mejorar visibilidad del texto */
+section,
+footer {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Mantener estilos medio moderno ahi */
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+.foto-perfil:hover {
+    transform: scale(1.10);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.lista-proyectos {
+    list-style: none;
+    padding: 0;
+}
+
+.item-proyecto {
+    background: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-proyecto:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.decoraciones {
+    position: relative;
+}
+
+.decoracion {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    opacity: 0.5;
+    filter: blur(2px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.izquierda {
+    left: 70px;
+}
+
+.derecha {
+    right: 70px;
+}
+
+footer {
+    text-align: center;
+}
