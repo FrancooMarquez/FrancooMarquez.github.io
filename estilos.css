@@ -56,6 +56,8 @@
     gap: 1rem;
     justify-content: center;
     margin-top: 1.2rem;
+    cursor: default;
+    user-select: none;
 }
 .skill {
     background: linear-gradient(90deg, #7c4dff 0%, #22c8e5 100%);
@@ -120,6 +122,12 @@ body {
     min-height: 100vh;
     background: linear-gradient(120deg, #0e0c11 0%, #2d1f3a 50%, #0e0c11 100%);
     overflow-x: hidden;
+    
+}
+
+#sobre-mi {
+    cursor: default;
+    user-select: none;
 }
 
 section,
